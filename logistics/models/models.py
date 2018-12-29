@@ -1,13 +1,13 @@
 from odoo import models, fields, api
 
-class Logistics(models.Model):
-    _name = 'city.logistics'
+class City(models.Model):
+    _name = 'logistics.city'
     _description = "City"
 
     name = fields.Char(string="Title", required=True)
 
-class Logistics(models.Model):
-    _name = 'shipper.logistics'
+class Shipper(models.Model):
+    _name = 'logistics.shipper'
     _description = "Shipper"
 
     name = fields.Char(string="Title", required=True)
