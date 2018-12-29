@@ -1,9 +1,12 @@
-# -*- coding: utf-8 -*-
-
 from odoo import models, fields, api
 
-# class logistics(models.Model):
-#     _name = 'logistics.logistics'
+class Logistics(models.Model):
+    _name = 'Logistics_city'
+    _description = "City"
+
+    name = fields.Char(string="Title", required=True)
+    description = fields.Text()
+
 
 #     name = fields.Char()
 #     value = fields.Integer()
