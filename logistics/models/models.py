@@ -5,8 +5,13 @@ class Logistics(models.Model):
     _description = "City"
 
     name = fields.Char(string="Title", required=True)
-    description = fields.Text()
 
+class Logistics(models.Model):
+    _name = 'shipper.logistics'
+    _description = "Shipper"
+
+    name = fields.Char(string="Title", required=True)
+    contact = fields.Text()
 
 #     name = fields.Char()
 #     value = fields.Integer()
