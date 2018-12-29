@@ -13,6 +13,24 @@ class Shipper(models.Model):
     name = fields.Char(string="Title", required=True)
     contact = fields.Text()
 
+class Transport(models.Model):
+    _name = 'logistics.transport'
+    _description = "Transport mean"
+
+    name = fields.Char(string="Name", required=True)
+
+class Customs_place(models.Model):
+    _name = 'logistics.customs_place'
+    _description = "Customs Place"
+
+    name = fields.Char(string="Name", required=True)
+
+class Terminal(models.Model):
+    _name = 'logistics.terminal'
+    _description = "Terminal"
+
+    name = fields.Char(string="Name", required=True)
+
 #     name = fields.Char()
 #     value = fields.Integer()
 #     value2 = fields.Float(compute="_value_pc", store=True)
