@@ -1,7 +1,7 @@
 from odoo import models, fields, api
 
 class Logistics(models.Model):
-    _name = 'Logistics_city'
+    _name = 'city.logistics'
     _description = "City"
 
     name = fields.Char(string="Title", required=True)
