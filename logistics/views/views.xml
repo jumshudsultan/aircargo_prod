@@ -1,4 +1,4 @@
-<!--
+
 
  <odoo>
     <data>
@@ -12,8 +12,16 @@
             <page name="operations_info" string="Operations info">
                 <group name="group_all">
                     <group name="group_left">
-                        <field name="x_studio_field_J4xQV" string="POL"/>
-                        <field name="x_studio_field_SWkhy" string="POD"/>
+                        <field name="logistics.city" string="POL"/>
+                    </group>
+                </group>
+            </page>
+        </xpath>
+        </field>
+        </record>
+    </data>
+ </odoo>
+<!--                    <field name="x_studio_field_SWkhy" string="POD"/>
                         <field name="x_studio_field_6h3Fi"/>
                         <field name="x_studio_field_VYW8F" string="Shipper Contact"/>
                         <field name="x_studio_field_Y4uLs" string="Importer"/>
@@ -127,5 +135,3 @@
     <menuitem name="Server to list" id="logistics" parent="logistics.menu_2"
               action="logistics.action_server"/>
     -->
-</data>
-        </odoo> -->
