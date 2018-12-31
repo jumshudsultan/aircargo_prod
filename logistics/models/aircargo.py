@@ -4,7 +4,7 @@ class City(models.Model):
     _name = 'logistics.city'
     _description = "City"
 
-    name = fields.Char(string="Title", required=True)
+    name = fields.Char(string="City Name", required=True)
 
 class Shipper(models.Model):
     _name = 'logistics.shipper'
