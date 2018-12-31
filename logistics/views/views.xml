@@ -26,7 +26,7 @@
                         </group>
                     </page>
                     <page name="customs" string="Customs">
-                        <group name="group_all">
+                        <group name="group_head">
                             <group name="group_left">
                                 <field name="importer" string="Importer"/>
                                 <field name="inspector" string="Inspector"/>
@@ -39,6 +39,11 @@
                                 <field name="argo_volume" string="Cargo Volume"/>
                                 <field name="invoice_value" string="Invoice Value"/>
                                 <field name="invoice_currency" string="Invoice Currency"/>
+                            </group>
+                        </group>
+                        <group name="group_foot">
+                            <group name="group_left" string="Calculation">
+
                             </group>
                         </group>
                     </page>
