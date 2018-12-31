@@ -8,3 +8,5 @@ class SaleCity(models.Model):
     city_name_pod = fields.Many2one('logistics.city', string="City Name")
     shipper = fields.Many2one('logistics.shipper', string="Shipper")
     shipper_contact = fields.Text(string='Shipper Contact', related='shipper.contact')
+    importer = fields.Many2one('res.partner', string="Importer")
+    cargo_dimensions = fields.Char(string='Cargo Dimensions')
