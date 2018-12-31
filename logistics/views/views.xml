@@ -11,6 +11,9 @@
                         <group name="group_all">
                             <group name="group_left">
                                 <field name="city_name" string="POL"/>
+                                <field name="city_name" string="POD"/>
+                                <field name="shipper" string="Shipper"/>
+                                <field name="shipper_contact" string="Shipper Contact"/>
                             </group>
                         </group>
                     </page>
