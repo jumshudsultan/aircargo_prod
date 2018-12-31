@@ -27,8 +27,8 @@
                             <group name="group_left">
                                 <field name="importer" string="Importer"/>
                                 <field name="inspector" string="Inspector"/>
-                                <field name="arrival_date" string="Arrival Date"/>
-                                <field name="departure_date" string="Departure Date"/>
+                                <field name="customs_arrival_date" string="Arrival Date"/>
+                                <field name="customs_departure_date" string="Departure Date"/>
                                 <field name="customs_place" string="Customs Place"/>
                                 <field name="terminal" string="Terminal"/>
                             </group>
