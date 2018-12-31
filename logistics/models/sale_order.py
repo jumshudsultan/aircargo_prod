@@ -43,4 +43,4 @@ class SaleCity(models.Model):
     broker_fee = fields.Float(string='Broker Fee')
     diger_xercler = fields.Float(string='Diger Xercler')
     diger_xercler_6 = fields.Float(string='Diger Xercler 6%')
-    cemi_mebleg = fields.Float(sum(deklarasiya,kseroks), string="Cemi Mebleg")
+    #cemi_mebleg = fields.Float(sum(deklarasiya,kseroks), string="Cemi Mebleg")
