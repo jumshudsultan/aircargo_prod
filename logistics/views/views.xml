@@ -45,6 +45,23 @@
                             <group name="group_left" string="Calculation">
                                 <field name="deklarasiya"/>
                                 <field name="kseroks"/>
+                                <field name="inspektor_maliyye"/>
+                                <field name="inspektor_yuk"/>
+                                <field name="terminal_mebleg"/>
+                                <field name="kontrabanda"/>
+                                <field name="laboratoriya"/>
+                                <field name="kuryer_gomruk"/>
+                                <field name="bank"/>
+                                <field name="bank_kom"/>
+                                <field name="fehle"/>
+                                <field name="avtokar"/>
+                                <field name="buraxilish"/>
+                                <field name="catdirilma"/>
+                                <field name="beledci"/>
+                                <field name="broker_fee"/>
+                                <field name="diger_xercler"/>
+                                <field name="diger_xercler_6"/>
+                                <field name="cemi_mebleg"/>
                             </group>
                         </group>
                     </page>

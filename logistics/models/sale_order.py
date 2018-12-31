@@ -4,8 +4,8 @@ from odoo import models, fields, api
 class SaleCity(models.Model):
     _inherit = 'sale.order'
 
-    city_name_pol = fields.Many2one('logistics.city', string="City Name")
-    city_name_pod = fields.Many2one('logistics.city', string="City Name")
+    city_name_pol = fields.Many2one('logistics.city', string="City Name POL")
+    city_name_pod = fields.Many2one('logistics.city', string="City Name POD")
     shipper = fields.Many2one('logistics.shipper', string="Shipper")
     shipper_contact = fields.Text(string='Shipper Contact', related='shipper.contact')
     importer = fields.Many2one('res.partner', string="Importer")
@@ -43,3 +43,4 @@ class SaleCity(models.Model):
     broker_fee = fields.Float(string='Broker Fee')
     diger_xercler = fields.Float(string='Diger Xercler')
     diger_xercler_6 = fields.Float(string='Diger Xercler 6%')
+    cemi_mebleg = fields.Float(sum(deklarasiya,kseroks), string="Cemi Mebleg")
