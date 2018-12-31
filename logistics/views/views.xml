@@ -2,7 +2,7 @@
 <data>
     <record model="ir.ui.view" id="logistics_addon_view">
     <field name="name">logistics addon view</field>
-    <field name="model">logisitcs.city</field>
+    <field name="model">logistics.city</field>
     <field name="inherit_id" ref="sale.view_order_form"/>
     <field name="arch" type="xml">
 
