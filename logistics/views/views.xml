@@ -22,6 +22,18 @@
                                 <field name="waybill" string="Waybill"/>
                                 <field name="order_date" string="Order Date"/>
                                 <field name="arrival_date" string="Arrival Date"/>
+                    <page name="customs" string="Customs">
+                        <group name="group_all">
+                            <group name="group_left">
+                                <field name="importer" string="Importer"/>
+                                <field name="inspector" string="Inspector"/>
+                                <field name="arrival_date" string="Arrival Date"/>
+                                <field name="departure_date" string="Departure Date"/>
+                                <field name="customs_place" string="Customs Place"/>
+                                <field name="terminal" string="Terminal"/>
+                            </group>
+                        </group>
+                    </page>
                             </group>
                         </group>
                     </page>

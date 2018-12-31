@@ -14,3 +14,8 @@ class SaleCity(models.Model):
     waybill = fields.Char(string='Waybill')
     order_date = fields.Date(string='Order Date')
     arrival_date = fields.Date(string='Arrival Date')
+    inspector = fields.Char(string='Inspector')
+    custom_arrival_date = fields.Date(string='Arrival Date')
+    custom_departure_date = fields.Date(string='Departure Date')
+    customs_place = fields.Many2one('logistics.customs_place', string="Customs Place")
+    terminal = fields.Many2one('logistics.terminal', string="Terminal")
