@@ -10,3 +10,7 @@ class SaleCity(models.Model):
     shipper_contact = fields.Text(string='Shipper Contact', related='shipper.contact')
     importer = fields.Many2one('res.partner', string="Importer")
     cargo_dimensions = fields.Char(string='Cargo Dimensions')
+    transport_mean = fields.Many2one('logistics.transport', string="Transport Mean")
+    waybill = fields.Char(string='Waybill')
+    order_date = fields.Date(string='Order Date')
+    arrival_date = fields.Date(string='Arrival Date')
