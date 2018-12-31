@@ -22,6 +22,9 @@
                                 <field name="waybill" string="Waybill"/>
                                 <field name="order_date" string="Order Date"/>
                                 <field name="arrival_date" string="Arrival Date"/>
+                            </group>
+                        </group>
+                    </page>
                     <page name="customs" string="Customs">
                         <group name="group_all">
                             <group name="group_left">
@@ -31,9 +34,6 @@
                                 <field name="customs_departure_date" string="Departure Date"/>
                                 <field name="customs_place" string="Customs Place"/>
                                 <field name="terminal" string="Terminal"/>
-                            </group>
-                        </group>
-                    </page>
                             </group>
                         </group>
                     </page>
