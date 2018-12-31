@@ -43,7 +43,8 @@
                         </group>
                         <group name="group_foot">
                             <group name="group_left" string="Calculation">
-
+                                <field name="deklarasiya"/>
+                                <field name="kseroks"/>
                             </group>
                         </group>
                     </page>
