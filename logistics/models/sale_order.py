@@ -19,6 +19,6 @@ class SaleCity(models.Model):
     customs_departure_date = fields.Date(string='Departure Date')
     customs_place = fields.Many2one('logistics.customs_place', string="Customs Place")
     terminal = fields.Many2one('logistics.terminal', string="Terminal")
-    cargo_volume = fields.Float(string=='Cargo Volume')
-    invoice_value = fields.Float(string == 'Invoice Value')
+    cargo_volume = fields.Float(string='Cargo Volume')
+    invoice_value = fields.Float(string= 'Invoice Value')
     invoice_currency = fields.Many2one('res.currency', string="Invoice Currency")
