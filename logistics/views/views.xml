@@ -1,5 +1,5 @@
 
-
+<!--
  <odoo>
     <data>
         <record model="ir.ui.view" id="logistics_addon_view">
@@ -21,6 +21,7 @@
         </record>
     </data>
  </odoo>
+-->
 <!--                    <field name="x_studio_field_SWkhy" string="POD"/>
                         <field name="x_studio_field_6h3Fi"/>
                         <field name="x_studio_field_VYW8F" string="Shipper Contact"/>
