@@ -35,6 +35,11 @@
                                 <field name="customs_place" string="Customs Place"/>
                                 <field name="terminal" string="Terminal"/>
                             </group>
+                            <group name="group_right">
+                                <field name="argo_volume" string="Cargo Volume"/>
+                                <field name="invoice_value" string="Invoice Value"/>
+                                <field name="invoice_currency" string="Invoice Currency"/>
+                            </group>
                         </group>
                     </page>
                 </xpath>
