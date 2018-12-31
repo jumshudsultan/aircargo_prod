@@ -1,8 +1,8 @@
-<!-- <odoo>
+<odoo>
 <data>
     <record model="ir.ui.view" id="logistics_addon_view">
     <field name="name">logistics addon view</field>
-    <field name="model">sale.order</field>
+    <field name="model">city</field>
     <field name="inherit_id" ref="sale.view_order_form"/>
     <field name="arch" type="xml">
 
@@ -10,7 +10,7 @@
         <page name="operations_info" string="Operations info">
             <group name="group_all">
                 <group name="group_left">
-                    <field name="logistics.city" string="POL"/>
+                    <field name="name" string="POL"/>
                 </group>
             </group>
         </page>
@@ -19,7 +19,7 @@
     </record>
 </data>
 </odoo>
--->
+
 <!--                    <field name="x_studio_field_SWkhy" string="POD"/>
                     <field name="x_studio_field_6h3Fi"/>
                     <field name="x_studio_field_VYW8F" string="Shipper Contact"/>
