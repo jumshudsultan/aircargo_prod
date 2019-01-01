@@ -66,29 +66,13 @@
                         </group>
                     </page>
                 </xpath>
-            </field>
-
-            <field name="name">SO-PO relation</field>
-            <field name="model">purchase.order</field>
-            <field name="inherit_id" ref="purchase.purchase_order_form"/>
-            <field name="arch" type="xml">
-                <xpath expr="//field[@name='partner_id']" position="before">
-                    <field name="sale_order" attrs="{}" readonly="1"/>
-                </xpath>
-            </field>
-
-            <field name="name">PO-SO relation</field>
-            <field name="model">sale.order</field>
-            <field name="inherit_id" ref="sale.view_order_form"/>
-            <field name="arch" type="xml">
                 <div class="oe_button_box" name="button_box">
-                    <button class="oe_stat_button" icon="fa-diamond" type="object"
+                    <button class="oe_stat_button" icon="fa-diamond" type="action" name="logistics.action_window"
                             name="SO2PO_smart_action">
                         <field name="po_count" string="Purchase Orders" widget="statinfo"/>
                     </button>
                 </div>
             </field>
-
         </record>
     </data>
 </odoo>
@@ -110,13 +94,11 @@
         -->
 
         <!-- actions opening views on models -->
-        <!--
-        <record model="ir.actions.act_window" id="logistics.action_window">
-          <field name="name">logistics window</field>
-          <field name="res_model">logistics.logistics</field>
-          <field name="view_mode">tree,form</field>
-        </record>
-        -->
+<record model="ir.actions.act_window" id="logistics.action_window">
+<field name="name">Purchase Order</field>
+<field name="res_model">logistics.logistics</field>
+<field name="view_mode">tree,form</field>
+</record>
 
         <!-- server action to the one above -->
         <!--
