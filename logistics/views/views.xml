@@ -80,6 +80,8 @@
             <field name="name">Purchase Order</field>
             <field name="res_model">purchase.order</field>
             <field name="view_mode">tree,form</field>
+            <field name="domain">[('sale_order', '=', active_id)]</field>
+            <field name="context">{'search_default_sale_order': active_id,'default_sale_order': active_id}</field>
         </record>
 
         <record model="ir.ui.view" id="SO_in_PO">
