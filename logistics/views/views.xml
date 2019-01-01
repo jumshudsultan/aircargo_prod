@@ -108,8 +108,12 @@
             <field name="active" eval="True"/>
             <field name="arch" type="xml">
                 <xpath expr="//button[@name='action_quotation_send']" position="after">
-                    <button string="New PO" class="btn_primary" type="action"
+                    <button string="New PO" type="action"
                             attrs="{'invisible': ['|',('invoice_status', '!=', 'no'), ('state', '!=', 'sale')]}"
+                            name="sale_order_new_PO_button_action">
+                    </button>
+                    <button string="New PO 2" class="btn_primary" type="action"
+                            attrs="{'invisible': [('invoice_status', '!=', 'to invoice')]}"
                             name="sale_order_new_PO_button_action">
                     </button>
                 </xpath>
