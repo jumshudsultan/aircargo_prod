@@ -67,8 +67,7 @@
                     </page>
                 </xpath>
                 <div class="oe_button_box" name="button_box">
-                    <button class="oe_stat_button" icon="fa-diamond" type="action" name="logistics.action_window"
-                            name="SO2PO_smart_action">
+                    <button class="oe_stat_button" icon="fa-diamond" type="action" name="logistics.action_window">
                         <field name="po_count" string="Purchase Orders" widget="statinfo"/>
                     </button>
                 </div>
