@@ -43,4 +43,11 @@ class SaleCity(models.Model):
     broker_fee = fields.Float(string='Broker Fee')
     diger_xercler = fields.Float(string='Diger Xercler')
     diger_xercler_6 = fields.Float(string='Diger Xercler 6%')
+
+    @api.one
+    def _get_total(self):
+        try:
+            self.cemi_mebleg = self.deklarasiya + self.kseroks
+
+    cemi_mebleg = fields.Float(compute='_get_total', string="Cemi Mebleg")
     #cemi_mebleg = fields.Float(sum(deklarasiya,kseroks), string="Cemi Mebleg")

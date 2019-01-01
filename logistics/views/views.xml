@@ -61,6 +61,7 @@
                                 <field name="broker_fee"/>
                                 <field name="diger_xercler"/>
                                 <field name="diger_xercler_6"/>
+                                <field name="cemi_mebleg"/>
                             </group>
                         </group>
                     </page>
