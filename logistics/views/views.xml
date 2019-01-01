@@ -122,6 +122,8 @@
             <field name="res_model">purchase.order</field>
             <field name="view_mode">form</field>
             <field name="target">new</field>
+            <field name="domain">[('sale_order', '=', active_id)]</field>
+            <field name="context">{'search_default_sale_order': active_id,'default_sale_order': active_id}</field>
         </record>
 
     </data>
@@ -131,8 +133,6 @@
         <!-- explicit list view definition -->
         <!--
 
-        <field name="domain">[('sale_order', '=', active_id)]</field>
-            <field name="context">{'search_default_sale_order': active_id,'default_sale_order': active_id}</field>
 
         <record model="ir.ui.view" id="logistics.list">
           <field name="name">logistics list</field>
