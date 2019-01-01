@@ -81,12 +81,12 @@
             <field name="model">sale.order</field>
             <field name="inherit_id" ref="sale.view_order_form"/>
             <field name="arch" type="xml">
-                <xpath expr="//button[@name='active']" position="after">
+                <div class="oe_button_box" name="button_box">
                     <button class="oe_stat_button" icon="fa-diamond" type="action"
                             name="SO2PO_smart_action">
                         <field name="po_count" string="Purchase Orders" widget="statinfo"/>
                     </button>
-                </xpath>
+                </div>
             </field>
 
         </record>
