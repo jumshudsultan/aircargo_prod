@@ -67,6 +67,15 @@
                     </page>
                 </xpath>
             </field>
+
+            <field name="name">SO-PO relation</field>
+            <field name="model">purchase.order</field>
+            <field name="inherit_id" ref="purchase.purchase_order_form"/>
+            <field name="arch" type="xml"/>
+                <xpath expr="//field[@name='partner_id']" position="before">
+                    <field name="sale_order" attrs="{}" readonly="1"/>
+                </xpath>
+
         </record>
     </data>
 </odoo>

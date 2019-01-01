@@ -39,3 +39,23 @@ class Terminal(models.Model):
 #     @api.depends('value')
 #     def _value_pc(self):
 #         self.value2 = float(self.value) / 100
+
+class Purchase_Order(models.Model):
+    _inherit = 'purchase.order'
+
+    sale_order = fields.Many2one('sale.order',
+    string="Sale Order")
+
+    class Sale_Order(models.Model):
+        _inherit = 'sale.order'
+
+        po_count = fields.Integer(compute='_po_count')
+
+        @api.multi
+        def _po_count( self ):
+            results = self.env['purchase.order'].read_group([('sale.order', 'in', self.ids)], 'sale.order', 'sale.order')
+            dic = {}
+            for x in results:
+                dic[x['sale.order'][0]] = x['sale.order_count']
+            for record in self:
+                record['po_count'] = dic.get(record.id, 0)
