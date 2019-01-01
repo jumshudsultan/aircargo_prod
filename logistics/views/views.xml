@@ -121,7 +121,7 @@
         </record>
 
         <!--"NEW PO" button as "NEW Invoice" -->
-        <record model="ir.actions.act_window" id="sale_order_new_PO_button_action">
+        <record model="ir.actions.act_window" id="logistics.sale_order_new_PO_button_action">
             <field name="name">New PO</field>
             <field name="res_model">purchase.order</field>
             <field name="view_mode">form</field>
