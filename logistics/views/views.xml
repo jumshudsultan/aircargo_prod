@@ -75,7 +75,7 @@
         </record>
 
 
-        <!-- actions opening views on models -->
+        <!-- action and button of PO in SO -->
         <record model="ir.actions.act_window" id="logistics.action_window">
             <field name="name">Purchase Order</field>
             <field name="res_model">purchase.order</field>
@@ -91,10 +91,41 @@
             <field name="arch" type="xml">
 
                 <xpath expr="//field[@name='partner_ref']" position="after">
-                    <field name="sale_order" context="{'search_default_partner_id': partner_id, 'default_partner_id': partner_id}" readonly="1"/>
+                    <field name="sale_order"
+                           context="{'search_default_partner_id': partner_id, 'default_partner_id': partner_id}"
+                           readonly="1"/>
                 </xpath>
             </field>
         </record>
+
+        <record id="sales_new_PO_button"
+                model="ir.ui.view">
+            <field name="inherit_id" ref="sale.view_order_form"/>
+            <field name="mode">extension</field>
+            <field name="model">sale.order</field>
+            <field name="name">sale.order.new.PO.button.form</field>
+            <field name="type">form</field>
+            <field name="active" eval="True"/>
+            <field name="arch" type="xml">
+                <xpath expr="//button[@name='action_quotation_send']" position="after">
+                    <button string="New PO" class="oe_highlight" type="action"
+                            attrs="{'invisible': ['|',('invoice_status', '!=', 'no'), ('state', '!=', 'sale')]}"
+                            name="sale_order_new_PO_button_action">
+                    </button>
+                </xpath>
+            </field>
+        </record>
+
+        <!--"NEW PO" button as "NEW Invoice" -->
+        <record model="ir.actions.act_window" id="sale_order_new_PO_button_action">
+            <field name="name">New PO</field>
+            <field name="res_model">purchase.order</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+            <field name="domain">[('sale_order', '=', active_id)]</field>
+            <field name="context">{'search_default_sale_order': active_id,'default_sale_order': active_id}</field>
+        </record>
+
     </data>
 </odoo>
 
