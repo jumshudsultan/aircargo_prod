@@ -89,7 +89,7 @@
             <field name="arch" type="xml">
 
                 <xpath expr="//field[@name='partner_ref']" position="after">
-                    <field name="sale_order"/>
+                    <field name="sale_order" context="{'search_default_partner_id': partner_id, 'default_partner_id': partner_id}" readonly="1"/>
                 </xpath>
             </field>
         </record>
