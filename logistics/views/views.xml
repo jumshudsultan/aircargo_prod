@@ -75,11 +75,10 @@
         </record>
 
 
-
         <!-- actions opening views on models -->
         <record model="ir.actions.act_window" id="logistics.action_window">
             <field name="name">Purchase Order</field>
-            <field name="res_model">logistics.logistics</field>
+            <field name="res_model">purchase.order</field>
             <field name="view_mode">tree,form</field>
         </record>
 
