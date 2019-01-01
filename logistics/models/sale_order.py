@@ -44,10 +44,10 @@ class SaleCity(models.Model):
     diger_xercler = fields.Float(string='Diger Xercler')
     diger_xercler_6 = fields.Float(string='Diger Xercler 6%')
 
-    @api.one
-    def _get_total(self):
-        try:
-            self.cemi_mebleg = self.deklarasiya + self.kseroks
+    cemi_mebleg = fields.Float(compute='_compute_sum', string="Cemi Mebleg")
 
-    cemi_mebleg = fields.Float(compute='_get_total', string="Cemi Mebleg")
+    @api.onchange('deklarasiya', 'kseroks')
+    def _compute_sum(self):
+        self.cemi_mebleg = self.deklarasiya + self.kseroks
+
     #cemi_mebleg = fields.Float(sum(deklarasiya,kseroks), string="Cemi Mebleg")
