@@ -53,7 +53,7 @@ class Purchase_Order(models.Model):
 
         @api.multi
         def _po_count(self ):
-            results = self.env['purchase.order'].read_group([('sale.order', 'in', self.ids)], 'sale.order', 'sale.order')
+            results = self.env['purchase.order'].read_group([('sale_order', 'in', self.ids)], 'sale_order', 'sale_order')
             dic = {}
             for x in results:
                 dic[x['sale_order'][0]] = x['sale_order_count']
