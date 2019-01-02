@@ -6,7 +6,7 @@
         "customizations for logistics industry",
 
     'description':
-    "customizations for logistics industry",
+        "customizations for logistics industry",
 
     'author': "ERPGO",
     'website': "http://www.erpgo.az",
@@ -24,16 +24,17 @@
         'product',
         'purchase',
         'sale',
-        ],
+    ],
 
     # always loaded
     'data': [
-        #'security/ir.model.access.csv',
+        'security/ir.model.access.csv',
+        'security/security.xml',
         'views/views.xml',
-        #'views/templates.xml',
+        # 'views/templates.xml',
     ],
     # only loaded in demonstration mode
     'demo': [
-        #'demo/demo.xml',
+        # 'demo/demo.xml',
     ],
 }
