@@ -1,6 +1,6 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_logistics_logistics,logistics.logistics,model_logistics.city,,1,0,0,0
-access_logistics_logistics,logistics.logistics,model_logistics.shipper,,1,0,0,0
-access_logistics_logistics,logistics.logistics,model_logistics.transport,,1,0,0,0
-access_logistics_logistics,logistics.logistics,model_logistics.customs_place,,1,0,0,0
-access_logistics_logistics,logistics.logistics,model_logistics.terminal,,1,0,0,0
+access_logistics_logistics,logistics.logistics,model_logistics_city,,1,0,0,0
+access_logistics_logistics,logistics.logistics,model_logistics_shipper,,1,0,0,0
+access_logistics_logistics,logistics.logistics,model_logistics_transport,,1,0,0,0
+access_logistics_logistics,logistics.logistics,model_logistics_customs_place,,1,0,0,0
+access_logistics_logistics,logistics.logistics,model_logistics_terminal,,1,0,0,0
