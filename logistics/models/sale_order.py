@@ -59,7 +59,7 @@ class Customs_calculation(models.Model):
     _name = 'logistics.customs_calculation'
     _description = "Customs calculation"
 
-    name = fields.Char(string="Category")
+    name = fields.Char(string="Payment Category", required=True)
     amount = fields.Float(string="Amount")
     sale_order = fields.Many2one('sale.order', string='Sale Order', required=True, ondelete='cascade', index=True,
                                  copy=False, readonly=True)
