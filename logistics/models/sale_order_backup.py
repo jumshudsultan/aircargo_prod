@@ -25,30 +25,6 @@ class SaleCity(models.Model):
     invoice_value = fields.Float(string= 'Invoice Value')
     invoice_currency = fields.Many2one('res.currency', string="Invoice Currency")
 
-    calculation_ids = fields.One2many('logistics.customs_calculation', 'sale_order', string="Custom Calculations")
-
-
-
-
-class Customs_calculation(models.Model):
-    _name = 'logistics.customs_calculation'
-    _description = "Customs calculation"
-
-    name = fields.Char(string="Category")
-    amount = fields.Float(string="Amount")
-    sale_order = fields.Many2one('sale.order', string='Sale Order', required=True, ondelete='cascade', index=True, copy=False, readonly=True)
-
-
-
-
-
-
-
-
-
-
-
-
     deklarasiya = fields.Float(string='Deklarasiya')
     kseroks = fields.Float(string='Kseroks')
     inspektor_maliyye = fields.Float(string='Inspektor Maliyye')
