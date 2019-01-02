@@ -22,32 +22,10 @@ class SaleCity(models.Model):
     terminal = fields.Many2one('logistics.terminal', string="Terminal")
 
     cargo_volume = fields.Float(string='Cargo Volume')
-    invoice_value = fields.Float(string= 'Invoice Value')
+    invoice_value = fields.Float(string='Invoice Value')
     invoice_currency = fields.Many2one('res.currency', string="Invoice Currency")
 
     calculation_ids = fields.One2many('logistics.customs_calculation', 'sale_order', string="Custom Calculations")
-
-
-
-
-class Customs_calculation(models.Model):
-    _name = 'logistics.customs_calculation'
-    _description = "Customs calculation"
-
-    name = fields.Char(string="Category")
-    amount = fields.Float(string="Amount")
-    sale_order = fields.Many2one('sale.order', string='Sale Order', required=True, ondelete='cascade', index=True, copy=False, readonly=True)
-
-
-
-
-
-
-
-
-
-
-
 
     deklarasiya = fields.Float(string='Deklarasiya')
     kseroks = fields.Float(string='Kseroks')
@@ -70,6 +48,18 @@ class Customs_calculation(models.Model):
 
     cemi_mebleg = fields.Float(compute='_compute_sum', string="Cemi Mebleg")
 
-    @api.onchange('deklarasiya', 'kseroks', 'inspektor_maliyye', 'inspektor_yuk', 'terminal_mebleg', 'kontrabanda', 'laboratoriya', 'kuryer_gomruk', 'bank', 'bank_kom', 'fehle', 'avtokar', 'buraxilish', 'catdirilma', 'beledci', 'broker_fee', 'diger_xercler', 'diger_xercler_6')
+    @api.onchange('deklarasiya', 'kseroks', 'inspektor_maliyye', 'inspektor_yuk', 'terminal_mebleg', 'kontrabanda',
+                  'laboratoriya', 'kuryer_gomruk', 'bank', 'bank_kom', 'fehle', 'avtokar', 'buraxilish', 'catdirilma',
+                  'beledci', 'broker_fee', 'diger_xercler', 'diger_xercler_6')
     def _compute_sum(self):
         self.cemi_mebleg = self.deklarasiya + self.kseroks + self.inspektor_maliyye + self.inspektor_yuk + self.terminal_mebleg + self.kontrabanda + self.laboratoriya + self.kuryer_gomruk + self.bank + self.bank_kom + self.fehle + self.avtokar + self.buraxilish + self.catdirilma + self.beledci + self.broker_fee + self.diger_xercler + self.diger_xercler_6
+
+
+class Customs_calculation(models.Model):
+    _name = 'logistics.customs_calculation'
+    _description = "Customs calculation"
+
+    name = fields.Char(string="Category")
+    amount = fields.Float(string="Amount")
+    sale_order = fields.Many2one('sale.order', string='Sale Order', required=True, ondelete='cascade', index=True,
+                                 copy=False, readonly=True)
