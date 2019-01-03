@@ -55,11 +55,18 @@ class SaleCity(models.Model):
         self.cemi_mebleg = self.deklarasiya + self.kseroks + self.inspektor_maliyye + self.inspektor_yuk + self.terminal_mebleg + self.kontrabanda + self.laboratoriya + self.kuryer_gomruk + self.bank + self.bank_kom + self.fehle + self.avtokar + self.buraxilish + self.catdirilma + self.beledci + self.broker_fee + self.diger_xercler + self.diger_xercler_6
 
 
-class Customs_calculation(models.Model):
-    _name = 'logistics.customs_calculation'
-    _description = "Customs calculation"
+class Customs_categories(models.Model):
+    _name = 'logistics.customs_categories'
+    _description = "Customs Categories"
 
     name = fields.Char(string="Payment Category", required=True)
+
+
+class Customs_calculation(models.Model):
+    _name = 'logistics.customs_calculation'
+    _description = "Customs Calculation"
+
+    name = fields.Many2one('logistics.customs_categories', string="Payment Category", required=True)
     amount = fields.Float(string="Amount")
     sale_order = fields.Many2one('sale.order', string='Sale Order', required=True, ondelete='cascade', index=True,
                                  copy=False, readonly=True)

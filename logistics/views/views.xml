@@ -126,6 +126,19 @@
             <field name="context">{'search_default_sale_order': active_id,'default_sale_order': active_id}</field>
         </record>
 
+        <xpath expr="//form[1]/sheet[1]/notebook[1]" position="inside">
+            <page name="customs_calculations" string="Customs Calculation">
+                <group name="calculations">
+                    <field name="calculation_ids" editable="bottom">
+                        <tree string="Customs calculation">
+                            <field name="name"/>
+                            <field name="amount"/>
+                        </tree>
+                    </field>
+                </group>
+            </page>
+        </xpath>
+
     </data>
 </odoo>
 
