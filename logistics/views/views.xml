@@ -77,7 +77,7 @@
                             <field name="calculation_ids">
                                 <tree string="Customs calculation" editable="bottom">
                                     <field name="name"/>
-                                    <field name="amount"/>
+                                    <field name="amount" sum="Total"/>
                                 </tree>
                             </field>
                     </page>
