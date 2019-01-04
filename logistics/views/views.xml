@@ -1,4 +1,5 @@
 <odoo>
+    <data>
         <record model="ir.ui.view" id="logistics_addon_view">
             <field name="name">logistics addon view</field>
             <field name="model">sale.order</field>
@@ -65,11 +66,25 @@
                         </group>
                     </page>
                 </xpath>
+
                 <div class="oe_button_box" name="button_box">
                     <button class="oe_stat_button" icon="fa-diamond" type="action" name="logistics.action_window">
                         <field name="po_count" string="Purchase Orders" widget="statinfo"/>
                     </button>
                 </div>
+                <xpath expr="//form[1]/sheet[1]/notebook[1]" position="inside">
+                    <page name="customs_calculations" string="Customs Calculation">
+                        <group name="calculations">
+                            <field name="calculation_ids" editable="bottom">
+                                <tree string="Customs calculation">
+                                    <field name="name"/>
+                                    <field name="amount"/>
+                                </tree>
+                            </field>
+                        </group>
+                    </page>
+                </xpath>
+
             </field>
         </record>
 
@@ -125,19 +140,7 @@
             <field name="context">{'search_default_sale_order': active_id,'default_sale_order': active_id}</field>
         </record>
 
-        <xpath expr="//form[1]/sheet[1]/notebook[1]" position="inside">
-            <page name="customs_calculations" string="Customs Calculation">
-                <group name="calculations">
-                    <field name="calculation_ids" editable="bottom">
-                        <tree string="Customs calculation">
-                            <field name="name"/>
-                            <field name="amount"/>
-                        </tree>
-                    </field>
-                </group>
-            </page>
-        </xpath>
-
+    </data>
 </odoo>
 
 
