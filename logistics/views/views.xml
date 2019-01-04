@@ -74,14 +74,12 @@
                 </div>
                 <xpath expr="//form[1]/sheet[1]/notebook[1]" position="inside">
                     <page name="customs_calculations" string="Customs Calculation">
-                        <group name="calculations">
                             <field name="calculation_ids">
-                                <tree string="Customs calculation">
+                                <tree string="Customs calculation" editable="bottom">
                                     <field name="name"/>
                                     <field name="amount"/>
                                 </tree>
                             </field>
-                        </group>
                     </page>
                 </xpath>
 
