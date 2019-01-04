@@ -1,8 +1,8 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_logistics_city,logistics city,model_logistics_city,group_manager,1,1,1,1
-access_logistics_shipper,logistics shipper,model_logistics_shipper,group_manager,1,1,1,1
-access_logistics_transport,logistics transport,model_logistics_transport,group_manager,1,1,1,1
-access_logistics_customs_place,logistics customs place,model_logistics_customs_place,group_manager,1,1,1,1
-access_logistics_terminal,logistics terminal,model_logistics_terminal,group_manager,1,1,1,1
-access_logistics_customs_categories,logistics customs categories,model_logistics_customs_categories,group_manager,1,1,1,1
-access_logistics_customs_calculation,logistics customs calculation,model_logistics_customs_calculation,group_manager,1,1,1,1
+access_logistics_city,logistics city,model_logistics_city,logistics_group_manager,1,1,1,1
+access_logistics_shipper,logistics shipper,model_logistics_shipper,logistics_group_manager,1,1,1,1
+access_logistics_transport,logistics transport,model_logistics_transport,logistics_group_manager,1,1,1,1
+access_logistics_customs_place,logistics customs place,model_logistics_customs_place,logistics_group_manager,1,1,1,1
+access_logistics_terminal,logistics terminal,model_logistics_terminal,logistics_group_manager,1,1,1,1
+access_logistics_customs_categories,logistics customs categories,model_logistics_customs_categories,logistics_group_manager,1,1,1,1
+access_logistics_customs_calculation,logistics customs calculation,model_logistics_customs_calculation,logistics_group_manager,1,1,1,1
