@@ -27,34 +27,6 @@ class SaleCity(models.Model):
 
     calculation_ids = fields.One2many('logistics.customs_calculation', 'sale_order', "Custom Calculations")
 
-    deklarasiya = fields.Float(string='Deklarasiya')
-    kseroks = fields.Float(string='Kseroks')
-    inspektor_maliyye = fields.Float(string='Inspektor Maliyye')
-    inspektor_yuk = fields.Float(string='Inspektor Yuk')
-    terminal_mebleg = fields.Float(string='Terminal Mebleg')
-    kontrabanda = fields.Float(string='Kontrabanda')
-    laboratoriya = fields.Float(string='Laboratoriya')
-    kuryer_gomruk = fields.Float(string='Kuryer Gomruk')
-    bank = fields.Float(string='Bank')
-    bank_kom = fields.Float(string='Bank Kom.')
-    fehle = fields.Float(string='Fehle')
-    avtokar = fields.Float(string='Avtokar')
-    buraxilish = fields.Float(string='Buraxilish')
-    catdirilma = fields.Float(string='Catdirilma')
-    beledci = fields.Float(string='Beledci')
-    broker_fee = fields.Float(string='Broker Fee')
-    diger_xercler = fields.Float(string='Diger Xercler')
-    diger_xercler_6 = fields.Float(string='Diger Xercler 6%')
-
-    cemi_mebleg = fields.Float(compute='_compute_sum', string="Cemi Mebleg")
-
-    @api.onchange('deklarasiya', 'kseroks', 'inspektor_maliyye', 'inspektor_yuk', 'terminal_mebleg', 'kontrabanda',
-                  'laboratoriya', 'kuryer_gomruk', 'bank', 'bank_kom', 'fehle', 'avtokar', 'buraxilish', 'catdirilma',
-                  'beledci', 'broker_fee', 'diger_xercler', 'diger_xercler_6')
-    def _compute_sum(self):
-        self.cemi_mebleg = self.deklarasiya + self.kseroks + self.inspektor_maliyye + self.inspektor_yuk + self.terminal_mebleg + self.kontrabanda + self.laboratoriya + self.kuryer_gomruk + self.bank + self.bank_kom + self.fehle + self.avtokar + self.buraxilish + self.catdirilma + self.beledci + self.broker_fee + self.diger_xercler + self.diger_xercler_6
-
-
 class Customs_categories(models.Model):
     _name = 'logistics.customs_categories'
     _description = "Customs Categories"
