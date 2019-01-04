@@ -1,6 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <data>
         <record model="ir.ui.view" id="logistics_addon_view">
             <field name="name">logistics addon view</field>
             <field name="model">sale.order</field>
@@ -140,7 +138,6 @@
             </page>
         </xpath>
 
-    </data>
 </odoo>
 
 
