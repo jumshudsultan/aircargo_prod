@@ -5,4 +5,4 @@ access_logistics_transport,logistics transport,model_logistics_transport,group_m
 access_logistics_customs_place,logistics customs place,model_logistics_customs_place,group_manager,1,1,1,1
 access_logistics_terminal,logistics terminal,model_logistics_terminal,group_manager,1,1,1,1
 access_logistics_customs_calculation,logistics customs calculation,model_logistics_customs_calculation,group_manager,1,1,1,1
-access_logistics.customs_categories,logistics customs categories,model_logistics_customs_categories,group_manager,1,1,1,1
+access_logistics_customs_categories,logistics customs categories,model_logistics_customs_categories,group_manager,1,1,1,1
