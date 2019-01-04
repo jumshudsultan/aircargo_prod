@@ -68,5 +68,6 @@ class Customs_calculation(models.Model):
 
     name = fields.Many2one('logistics.customs_categories', string="Payment Category", required=True)
     amount = fields.Float(string="Amount")
-    sale_order = fields.Many2one('sale.order', string='Sale Order', required=True, ondelete='cascade', index=True,
-                                 copy=False, readonly=True)
+
+    #sale_order = fields.Many2one('sale.order', string='Sale Order', required=True, ondelete='cascade', index=True,
+    #                             copy=False, readonly=True)
