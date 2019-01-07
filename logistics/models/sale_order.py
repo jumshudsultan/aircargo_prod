@@ -24,20 +24,20 @@ class SaleCity(models.Model):
     cargo_volume = fields.Float(string='Cargo Volume')
     invoice_value = fields.Float(string='Invoice Value')
     invoice_currency = fields.Many2one('res.currency', string="Invoice Currency")
-    
-    
+
     calculation_ids = fields.One2many('logistics.customs_calculation', 'sale_order', "Custom Calculations")
     load_categories = fields.Boolean(string="Load all categories")
-    
+
     @api.onchange('load_categories')
     def _load_categories(self):
         if self.load_categories:
             categories = self.env['logistics.customs_categories'].search([])
             for cat in categories:
                 self.sudo().update({
-                    'calculation_ids': [(0,0, {'name': cat.id})]
-                })                
-    
+                    'calculation_ids': [(0, 0, {'name': cat.id})]
+                })
+
+
 class Customs_categories(models.Model):
     _name = 'logistics.customs_categories'
     _description = "Customs Categories"
