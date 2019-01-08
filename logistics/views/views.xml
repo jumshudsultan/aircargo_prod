@@ -59,7 +59,7 @@
                                 </tree>
                             </field>
                         <group>
-                        <field name="load_categories" string="load default"/>
+                        <field name="load_categories" string="Load all categories"/>
                         </group>
                     </page>
                 </xpath>

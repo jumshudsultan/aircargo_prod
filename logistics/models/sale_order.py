@@ -26,7 +26,7 @@ class SaleCity(models.Model):
     invoice_currency = fields.Many2one('res.currency', string="Invoice Currency")
 
     calculation_ids = fields.One2many('logistics.customs_calculation', 'sale_order', "Custom Calculations")
-    load_categories = fields.Boolean(string="Load Categories")
+    load_categories = fields.Boolean(string="Load existing categories")
     
     @api.onchange('load_categories')
     def _load_categories(self):
