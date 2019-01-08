@@ -58,7 +58,9 @@
                                     <field name="amount" sum="Total"/>
                                 </tree>
                             </field>
-                            <field name="load_categories"/>
+                        <group>
+                        <field name="load_categories" string="load default"/>
+                        </group>
                     </page>
                 </xpath>
 

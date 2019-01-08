@@ -1,0 +1,58 @@
+<odoo>
+    <data>
+        <record id="logistics_payment_category_1" model="logistics.customs_categories">
+            <field name="name">deklarasiya</field>
+        </record>
+        <record id="logistics_payment_category_2" model="logistics.customs_categories">
+            <field name="name">kseroks</field>
+        </record>
+        <record id="logistics_payment_category_3" model="logistics.customs_categories">
+            <field name="name">inspektor_maliyye</field>
+        </record>
+        <record id="logistics_payment_category_4" model="logistics.customs_categories">
+            <field name="name">inspektor_yuk</field>
+        </record>
+        <record id="logistics_payment_category_5" model="logistics.customs_categories">
+            <field name="name">terminal_mebleg</field>
+        </record>
+        <record id="logistics_payment_category_6" model="logistics.customs_categories">
+            <field name="name">kontrabanda</field>
+        </record>
+        <record id="logistics_payment_category_7" model="logistics.customs_categories">
+            <field name="name">laboratoriya</field>
+        </record>
+        <record id="logistics_payment_category_8" model="logistics.customs_categories">
+            <field name="name">kuryer_gomruk</field>
+        </record>
+        <record id="logistics_payment_category_9" model="logistics.customs_categories">
+            <field name="name">bank</field>
+        </record>
+        <record id="logistics_payment_category_10" model="logistics.customs_categories">
+            <field name="name">bank_kom</field>
+        </record>
+        <record id="logistics_payment_category_11" model="logistics.customs_categories">
+            <field name="name">fehle</field>
+        </record>
+        <record id="logistics_payment_category_12" model="logistics.customs_categories">
+            <field name="name">avtokar</field>
+        </record>
+        <record id="logistics_payment_category_13" model="logistics.customs_categories">
+            <field name="name">buraxilish</field>
+        </record>
+        <record id="logistics_payment_category_14" model="logistics.customs_categories">
+            <field name="name">catdirilma</field>
+        </record>
+        <record id="logistics_payment_category_15" model="logistics.customs_categories">
+            <field name="name">beledci</field>
+        </record>
+        <record id="logistics_payment_category_16" model="logistics.customs_categories">
+            <field name="name">broker_fee</field>
+        </record>
+        <record id="logistics_payment_category_17" model="logistics.customs_categories">
+            <field name="name">diger_xercler</field>
+        </record>
+        <record id="logistics_payment_category_18" model="logistics.customs_categories">
+            <field name="name">diger_xercler_6</field>
+        </record>
+    </data>
+</odoo>

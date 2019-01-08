@@ -26,17 +26,20 @@ class SaleCity(models.Model):
     invoice_currency = fields.Many2one('res.currency', string="Invoice Currency")
 
     calculation_ids = fields.One2many('logistics.customs_calculation', 'sale_order', "Custom Calculations")
-    load_categories = fields.Boolean(string="Load all categories")
-
+    load_categories = fields.Boolean(string="Load Categories")
+    
     @api.onchange('load_categories')
     def _load_categories(self):
+        calculation_ids = []
+        value = {}
         if self.load_categories:
             categories = self.env['logistics.customs_categories'].search([])
             for cat in categories:
-                self.sudo().update({
-                    'calculation_ids': [(0, 0, {'name': cat.id})]
-                })
-
+                calculation_ids.append((0,0,{'name': cat.id}))
+            value.update(calculation_ids=calculation_ids)
+            return {'value': value}
+        else:
+            self.calculation_ids = None
 
 class Customs_categories(models.Model):
     _name = 'logistics.customs_categories'
