@@ -1,0 +1,4 @@
+[submodule "OCA/hr-timesheet/hr_timesheet_sheet_attendance"]
+	path = OCA/hr-timesheet/hr_timesheet_sheet_attendance
+	url = git@github.com:OCA/hr-timesheet.git
+	branch = 11.0
